@@ -1,0 +1,28 @@
+import * as React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
+
+class App extends React.Component{
+  render(){
+    return(
+        <View>
+          <Text style={styles.baseText}> It is basic </Text>
+          <Text style={[styles.baseText, styles.selectedText]}> and it is working </Text>
+          <Text style={styles.baseText}> hooray!!</Text>
+        </View>
+    )
+  }
+}
+
+const styles= StyleSheet.create({
+  baseText:{
+    fontSize:40,
+    padding:10,
+  },
+
+  selectedText:{
+    fontWeight:'bold',
+    backgroundColor:"#ff7c59"
+  }
+})
+
+export default App;
