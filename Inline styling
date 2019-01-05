@@ -1,0 +1,16 @@
+import * as React from 'react';
+import { View, Text } from 'react-native';
+
+class App extends React.Component{
+  render(){
+    return(
+        <View style={{padding:40}}>
+          <Text style={{padding:20, borderWidth:1}}> It is basic </Text>
+          <Text style={{borderWidth:1,padding:20, margin:10}} > and it is working </Text>
+          <Text style={{borderWidth:1,padding:20, margin:10}}>hooray!!</Text>
+        </View>
+    )
+  }
+}
+
+export default App;
