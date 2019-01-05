@@ -17,6 +17,8 @@ const styles= StyleSheet.create({
   baseText:{
     fontSize:40,
     padding:10,
+    margin:10,
+    borderWidth:StyleSheet.hairlineWidth
   },
 
   selectedText:{
@@ -24,5 +26,3 @@ const styles= StyleSheet.create({
     backgroundColor:"#ff7c59"
   }
 })
-
-export default App;
