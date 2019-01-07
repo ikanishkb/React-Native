@@ -1,0 +1,61 @@
+#App.js
+import * as React from 'react';
+import { Text, View, StyleSheet } from 'react-native';
+import { Constants } from 'expo';
+
+import Mybutton from './components/mybutton';
+
+export default class App extends React.Component {
+  render() {
+    return (
+      <View style={styles.container}>
+        <Mybutton myColor={'orange'} msg={'You are awesome!'}>Click 1</Mybutton>
+        <Mybutton myColor={'yellow'} msg={'This is awesome!'}>Click 2</Mybutton>
+        <Mybutton mycolor={'blue'} msg={'How are you!'}>Hello</Mybutton>
+      </View>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    paddingTop: Constants.statusBarHeight,
+    backgroundColor: '#ecf0f1',
+    padding: 8,
+  }
+});
+
+#mybutton.js(in components)
+import * as React from 'react';
+import { TouchableOpacity, Text, Alert ,StyleSheet } from 'react-native';
+
+class Mybutton extends React.Component {
+  render(){
+    // let myLabel = this.props.myLabel;
+    // let myColor = this.props.myColor;
+    let{children,myColor,msg} = this.props;
+
+      return(
+        <TouchableOpacity onPress={()=>{
+          Alert.alert(msg)
+          
+        }}>
+        <Text style={[styles.btn,{backgroundColor:myColor}]}>
+          {children}
+        </Text>
+        </TouchableOpacity>
+      )
+  }
+}
+
+const styles = StyleSheet.create({
+  btn:{
+    padding:10,
+    margin:10,
+    borderWidth:1
+  }
+})
+
+export default Mybutton
